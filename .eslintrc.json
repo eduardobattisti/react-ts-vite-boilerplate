@@ -1,16 +1,13 @@
 {
+  "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "./.eslintrc-auto-import.json"
-  ],
-  "parser": "@typescript-eslint/parser",
+  "extends": ["airbnb", "airbnb-typescript"],
+  "overrides": [],
   "parserOptions": {
+    "project": "./tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
     },
@@ -18,5 +15,8 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    "@typescript-eslint/comma-dangle": 0,
+    "react/jsx-one-expression-per-line": 0
+  }
 }

@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import matchers, {
   TestingLibraryMatchers,
 } from '@testing-library/jest-dom/matchers';

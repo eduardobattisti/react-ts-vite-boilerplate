@@ -1,14 +1,20 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import AutoImport from 'unplugin-auto-import/vite';
+import react from '@vitejs/plugin-react';
 import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],  
+  plugins: [
+    react(),
+    AutoImport({
+      imports: 'react'
+    })
+  ],
   test: {
     globals: true,
-    environment: 'jsdom'    ,
+    environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts']
   },
   resolve: {
@@ -24,4 +30,4 @@ export default defineConfig({
       '@public': path.resolve(__dirname, './public'),
     }
   }
-})
+});

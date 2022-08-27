@@ -28,6 +28,6 @@
       "@public/*": ["./public/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "./auto-imports.d.ts", "./vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
